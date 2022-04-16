@@ -2,49 +2,49 @@
     {
         "id": 1,
         "name": "Culture-Filled New England Destinations",
-        "Trip": "1-2 weeks",
+        "trip": "1-2 weeks",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "img": "https://i.ibb.co/NpmBHZr/services-1.jpg"
     },
     {
         "id": 2,
         "name": "Southern Utah’s National Parks and Small Towns",
-        "Trip": "1-2 weeks",
+        "trip": "1-2 weeks",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "img": "https://i.ibb.co/dt1w88t/services-2.jpg"
     },
     {
         "id": 3,
         "name": "Ohio Road Trip: Rock ‘n Roll, Roller Coasters, City Culture and Charm",
-        "Trip": "2 days",
+        "trip": "2 days",
         "price": "150",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "img": "https://i.ibb.co/LtFDBYp/services-3.jpg"
     },
     {
         "id": 4,
         "name": "Guam: An Island Packed with Natural Beauty and Cultural Charm",
-        "Trip": "1-2 weeks",
+        "trip": "1-2 weeks",
         "price": "180",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+        "img": "https://i.ibb.co/yhM74TN/services-4.jpg"
     },
     {
         "id": 5,
         "name": "Southern Atlantic Coast",
-        "Trip": "3 days",
+        "trip": "3 days",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "img": "https://i.ibb.co/7XQHyVY/services-5.jpg"
     },
     {
         "id": 6,
         "name": "The New England Coast",
-        "Trip": "4 days",
+        "trip": "4 days",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+        "img": "https://i.ibb.co/mF0Q4kM/services-6.jpg"
     }
 ]

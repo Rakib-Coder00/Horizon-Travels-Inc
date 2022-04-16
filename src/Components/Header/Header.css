@@ -1,0 +1,8 @@
+.active-link {
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 24px;
+    transition: color ease-in-out 300ms;
+    color: #1b4388;
+  }
+  
