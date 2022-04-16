@@ -5,7 +5,7 @@ import logo from '../../Asset/Image/main-nav-home.svg'
 const Header = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+      <Navbar collapseOnSelect  sticky='top' expand="lg" bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">
               <img src={logo} alt="img" />
