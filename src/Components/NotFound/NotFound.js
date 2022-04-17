@@ -1,9 +1,15 @@
 import React from 'react';
+import './NotFound.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFrown } from '@fortawesome/free-solid-svg-icons'
+
 
 const NotFound = () => {
     return (
-        <div>
-            <h3>Something went wrong!</h3>
+        <div className='container text-center mt-5'>
+            <h1 className='error-code'>4 <span className='fa'><FontAwesomeIcon icon={faFrown} /></span> 4</h1>
+            <h2>Oopps... Page Not Found!</h2>
+            <p className='mt-5'>The URL may be misplaced or the page you are looking is no longer available.</p>
         </div>
     );
 };

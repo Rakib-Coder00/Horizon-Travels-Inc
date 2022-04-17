@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
@@ -9,6 +9,8 @@ import './Login.css'
 const Login = () => {
     const navigate = useNavigate();
     const emailRef = useRef('');
+    const location = useLocation()
+    let from = location.state?.from?.pathname || "/";
 
     const [email, setEmail] = useState({value: '', error: ''});
     const [password, setPassword] = useState({value: '', error: ''});
@@ -20,14 +22,14 @@ const Login = () => {
 
     if (user) {
       toast.success('Successfully login', {id: 'success'})
-      navigate('/')
+      navigate(from, { replace: true })
     }
     if (error) {
       toast.error(error.message, {id: 'error'})
       
     }
     if (loading) {
-      <p>Loading...</p>;
+      toast.success('Loading...', {id: 'success'})
     }
 
     const handleEmail = (emailInput) => {

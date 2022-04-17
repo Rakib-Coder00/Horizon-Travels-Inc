@@ -15,7 +15,7 @@ const Signup = () => {
     const [createUserWithEmailAndPassword, user, loading,error,] = useCreateUserWithEmailAndPassword(auth);
 
     if (user) {
-      toast.success('Successfully login', {id: 'error'})
+      toast.success('Successfully created!', {id: 'error'})
       navigate('/')
     }
     if (loading) {
