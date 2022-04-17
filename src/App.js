@@ -7,14 +7,18 @@ import Login from './Components/Auth/Login/Login';
 import Services from './Components/Home/Services/Services';
 import Blog from './Components/Blog/Blog';
 import Footer from './Components/Footer/Footer';
+import { Toaster } from 'react-hot-toast';
+import Signup from './Components/Auth/Signup/Signup';
 
 function App() {
   return (
     <>
       <Header/>
+      <Toaster/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/services' element={<Services/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>

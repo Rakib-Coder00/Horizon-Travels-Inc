@@ -1,8 +1,18 @@
+.link1 {
+  font-size: 24px !important;
+  color: #1e90c2;
+  transition: color ease-in-out 300ms;
+}
+
+.link1:hover {
+  color: #F07D31 !important;
+}
 .active-link {
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 24px;
     transition: color ease-in-out 300ms;
-    color: #1b4388;
+    color: #bf4f04 !important;
   }
-  
+/* 
+  .navbar-light .navbar-nav .nav-link{
+    color: #F07D31 !important;
+  }  
+   */
