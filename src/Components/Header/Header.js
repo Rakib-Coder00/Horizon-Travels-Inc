@@ -1,31 +1,19 @@
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import {  signOut } from "firebase/auth";
+// import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link} from "react-router-dom";
 import logo from '../../Asset/Image/main-nav-home.svg'
 import auth from "../../Firebase/Firebase.init";
 import './Header.css'
 
 const Header = () => {
-    const { pathname } = useLocation();
-  const [user, setUser] = useState({})
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser({})
-      }
-    });
-  }, [])
+    const [user] = useAuthState(auth);
+    console.log(user);
+ 
   
   const handleLogout = () => {
-    signOut(auth).then(() => {
-      // Sign-out successful.
-    }).catch((error) => {
-      // An error happened.
-    });
+    signOut(auth);
   }
   return (
     <div>

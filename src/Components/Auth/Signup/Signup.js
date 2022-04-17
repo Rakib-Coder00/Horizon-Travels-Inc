@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from './../../../Firebase/Firebase.init';
-import GoogleLogo from '../../../Asset/Image/google.svg'
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -11,28 +12,30 @@ const Signup = () => {
     const [password, setPassword] = useState({value: '', error: ''})
     const [confirmPassword, setConfirmPassword] = useState({value: '', error: ''})
 
-  console.log(email);
-  console.log(password);
-  console.log(confirmPassword);
+    const [createUserWithEmailAndPassword, user, loading,error,] = useCreateUserWithEmailAndPassword(auth);
 
-  const provider = new GoogleAuthProvider();
-  const googleAuth = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const user = result.user;
-        toast.success('Successfully login', {id: 'error'})
-        navigate("/");
-      })
-      .catch((error) => {
+    if (user) {
+      toast.success('Successfully login', {id: 'error'})
+      navigate('/')
+    }
+    if (loading) {
+      return <p>Loading...</p>;
+    }
+    if (error) {
         const errorMessage = error.message;
-        toast.error(errorMessage, {id: 'error'});
-        
-      });
-  };
+        if (errorMessage.includes('email-already-in-use')) {
+          
+          toast.error('Already Exist', {id: 'error'})
+        }else{
+          toast.error(errorMessage, {id: 'error'})
+        }
+    }
 
-  const handleEmail = (e) => {
-    if (/^\S+@\S+\.\S+$/.test(e)) {
-      setEmail({value: e, error: ''})
+ 
+
+  const handleEmail = (emailInput) => {
+    if (/^\S+@\S+\.\S+$/.test(emailInput)) {
+      setEmail({value: emailInput, error: ''})
     }
     else{
       setEmail({value: '', error: 'Invalid Email'})
@@ -67,23 +70,7 @@ const Signup = () => {
 
 
     if (email.value && password.value && confirmPassword.value === password.value) {
-      
-      createUserWithEmailAndPassword(auth, email.value, password.value)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        toast.success('user Created', {id: 'error'})
-        navigate("/");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        if (errorMessage.includes('email-already-in-use')) {
-          
-          toast.error('Already Exist', {id: 'error'})
-        }else{
-          toast.error(errorMessage, {id: 'error'})
-        }
-      });
+      createUserWithEmailAndPassword(email.value, password.value)
     }
 
   };
@@ -136,12 +123,7 @@ const Signup = () => {
           <p>or</p>
           <div className="line-right" />
         </div>
-        <div className="input-wrapper">
-          <button onClick={googleAuth} className="google-auth">
-            <img src={GoogleLogo} alt="" />
-            <p> Continue with Google </p>
-          </button>
-        </div>
+        <SocialLogin/>
       </div>
     </div>
     );
