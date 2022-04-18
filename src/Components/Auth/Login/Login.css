@@ -141,3 +141,14 @@
     font-size: 15px;
   }
   
+  @media only screen and (max-width: 768px) {
+    .input-field input {
+      width: 315px;
+    }
+    .auth-form {
+      width: 365px;
+    }  
+    .google-auth {
+      width: 315px;
+    }  
+}
