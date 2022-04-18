@@ -10,7 +10,7 @@ const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
 
     if (loading) {
-      return  <Spinner animation="border" />
+      return  <Spinner  animation="border" variant="primary"  />
       }
 
     if (!user) {

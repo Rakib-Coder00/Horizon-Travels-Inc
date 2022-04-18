@@ -2,24 +2,32 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from './../../../Firebase/Firebase.init';
 
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Signup = () => {
     const navigate = useNavigate();
+
+
+    const [name, setName] = useState({value: '', error: ''})
     const [email, setEmail] = useState({value: '', error: ''})
     const [password, setPassword] = useState({value: '', error: ''})
     const [confirmPassword, setConfirmPassword] = useState({value: '', error: ''})
 
-    const [createUserWithEmailAndPassword, user, loading,error,] = useCreateUserWithEmailAndPassword(auth);
+
+
+    const [createUserWithEmailAndPassword, user, loading,error,] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
+
+
 
     if (user) {
       toast.success('Successfully created!', {id: 'error'})
       navigate('/')
     }
     if (loading) {
-      return <p>Loading...</p>;
+      toast.loading('Loading...!', {id: 'error'})
     }
     if (error) {
         const errorMessage = error.message;
@@ -31,7 +39,18 @@ const Signup = () => {
         }
     }
 
+
  
+  const handleName =(nameInput)=> {
+    console.log(nameInput.value);
+    if (nameInput === '') {
+      setName({value: '', error: 'Please provide a Name'})
+    }else{
+      setName({value: nameInput, error: ''})
+    }
+  }
+
+
 
   const handleEmail = (emailInput) => {
     if (/^\S+@\S+\.\S+$/.test(emailInput)) {
@@ -41,6 +60,9 @@ const Signup = () => {
       setEmail({value: '', error: 'Invalid Email'})
     }
   }
+
+
+
   const handlePassword = (passwordInput) => {
     if (passwordInput.length < 6) {
       setPassword({value: '', error: 'Password too short'})
@@ -48,6 +70,9 @@ const Signup = () => {
       setPassword({value: passwordInput, error: ''})
     }
   }
+
+
+
   const handleConfirmPassword = (confirmPasswordInput) => {
       console.log(confirmPasswordInput, password.value);
     if ( confirmPasswordInput === password.value) {
@@ -58,7 +83,7 @@ const Signup = () => {
   }
 
 
-  const handleSignUp = (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
 
     if (email.value === '') {
@@ -70,15 +95,30 @@ const Signup = () => {
 
 
     if (email.value && password.value && confirmPassword.value === password.value) {
-      createUserWithEmailAndPassword(email.value, password.value)
+     await createUserWithEmailAndPassword(email.value, password.value)
+     await updateProfile({ displayName : name.value});
+        toast.success('Updated profile!', {id: 'update'})
     }
 
   };
+
+
+
+
     return (
         <div className="auth-form-container ">
       <div className="auth-form">
         <h1>Sign Up</h1>
         <form onSubmit={handleSignUp}>
+        <div className="input-field">
+            <label htmlFor="name">Name</label>
+            <div className="input-wrapper">
+              <input onBlur={(e)=>handleName(e.target.value)} type="text" name="name" id="name" />
+            </div>
+            {
+              name?.error && <p className="error">{name.error}</p>
+            }
+          </div>
           <div className="input-field">
             <label htmlFor="email">Email</label>
             <div className="input-wrapper">

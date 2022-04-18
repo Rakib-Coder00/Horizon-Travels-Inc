@@ -29,7 +29,7 @@ const Login = () => {
       
     }
     if (loading) {
-      toast.success('Loading...', {id: 'success'})
+      toast.success('Loading...', {id: 'loading'})
     }
 
     const handleEmail = (emailInput) => {
