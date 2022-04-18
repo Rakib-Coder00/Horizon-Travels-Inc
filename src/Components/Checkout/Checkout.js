@@ -3,7 +3,7 @@ import './Checkout.css';
 
 const Checkout = () => {
     return (
-        <div className="mt-5">
+        <div className="mt-5 min-vh-100">
       <h1 className="text-plan text-center">Place to go !!</h1>
       <div className="checkout mt-5">
         <div className="container">

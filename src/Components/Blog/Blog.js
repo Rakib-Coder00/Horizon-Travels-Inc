@@ -3,7 +3,7 @@ import './Blog.css'
 
 const Blog = () => {
     return (
-        <div className="qna-container">
+        <div className="qna-container min-vh-100">
       <h1>Difference between authorization and authentication :</h1>
       <p>
       In simple terms, authentication is the process of verifying who a user is, while authorization is the process of verifying what they have access to. <br /> Both are very crucial topics often associated with the web as key pieces of its service infrastructure.
