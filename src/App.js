@@ -12,7 +12,6 @@ import Signup from './Components/Auth/Signup/Signup';
 import RequireAuth from './Components/Auth/RequireAuth/RequireAuth';
 import Checkout from './Components/Checkout/Checkout';
 import About from './Components/About/About';
-import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (

@@ -14,10 +14,9 @@ const Login = () => {
 
     const [email, setEmail] = useState({value: '', error: ''});
     const [password, setPassword] = useState({value: '', error: ''});
-    console.log(email.value, password.value);
 
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
 
     if (user) {

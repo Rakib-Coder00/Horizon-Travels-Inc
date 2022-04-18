@@ -18,7 +18,6 @@ const SocialLogin = () => {
       }
     if (loading) {
         return  <Spinner  animation="border" variant="primary"  />
-        // toast.success('Creating..', {id: 'erro'})
       }
 
     const googleAuth = () => {
