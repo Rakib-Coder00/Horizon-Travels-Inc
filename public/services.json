@@ -1,42 +1,42 @@
 [
     {
         "id": 1,
-        "name": "Culture-Filled New England Destinations",
+        "name": "Southern Atlantic Coast",
         "trip": "1-2 weeks",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Cruise south to soak up coastal charm, sun and top sights.Starting Point: Virginia Beach, Virginia.",
         "img": "https://i.ibb.co/NpmBHZr/services-1.jpg"
     },
     {
         "id": 2,
-        "name": "Southern Utah’s National Parks and Small Towns",
+        "name": "Southern Utah’s National Parks",
         "trip": "1-2 weeks",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Utah will steal your heart or at the very least take your breath away with its colorful deep canyons and starlit skies.",
         "img": "https://i.ibb.co/dt1w88t/services-2.jpg"
     },
     {
         "id": 3,
-        "name": "Ohio Road Trip: Rock ‘n Roll, Roller Coasters, City Culture and Charm",
+        "name": "Stockbridge, England",
         "trip": "2 days",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "On this intriguing road trip loop of New England, explore vibrant small cities and bucolic towns in Massachusetts, Connecticut and Rhode Island.",
         "img": "https://i.ibb.co/LtFDBYp/services-3.jpg"
     },
     {
         "id": 4,
-        "name": "Guam: An Island Packed with Natural Beauty and Cultural Charm",
+        "name": "Guam: An island Pacific Ocean",
         "trip": "1-2 weeks",
         "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "An Island Packed with Natural Beauty and Cultural Charm. Savor Unique Flavors Amid Untouched Natural Beauty.",
         "img": "https://i.ibb.co/yhM74TN/services-4.jpg"
     },
     {
         "id": 5,
-        "name": "Southern Atlantic Coast",
+        "name": "Cleveland, Ohio",
         "trip": "3 days",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Hit the open road for a trip that promises an exciting mix of unforgettable Ohio experiences.",
         "img": "https://i.ibb.co/7XQHyVY/services-5.jpg"
     },
     {
@@ -44,7 +44,7 @@
         "name": "The New England Coast",
         "trip": "4 days",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "description": "New England Road Trip: A seaside cruise from Boston, Massachusetts to Freeport, Maine",
         "img": "https://i.ibb.co/mF0Q4kM/services-6.jpg"
     }
 ]

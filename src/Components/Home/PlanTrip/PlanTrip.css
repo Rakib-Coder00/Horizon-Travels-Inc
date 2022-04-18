@@ -16,3 +16,13 @@
 .text-plan {
     color: #F07D31;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .plan .row {
+        min-height: 44vh;
+    }
+    .plan-content h2{
+        font-size: 34px;
+    }
+}

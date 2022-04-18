@@ -1,4 +1,5 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +13,14 @@ const SocialLogin = () => {
         toast.success('Successfully login', {id: 'success'})
             navigate('/')
       }
+    if (error) {
+        toast.error(error.message, {id: 'err'})
+      }
+    if (loading) {
+        return  <Spinner  animation="border" variant="primary"  />
+        // toast.success('Creating..', {id: 'erro'})
+      }
+
     const googleAuth = () => {
         signInWithGoogle()
       };

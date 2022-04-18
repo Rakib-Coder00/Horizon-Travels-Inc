@@ -17,10 +17,10 @@
 - [Read Our Blogs ](https://harmonious-longma-56e1af.netlify.app/blogs)
 
 ## Technologies I used in this project 
--[React]
--[react-firebase-hooks]
--[react-hot-toast]
--[react-bootstrap]
--[firebase]
+-  React
+-  react-firebase-hooks
+-  react-hot-toast
+-  react-bootstrap
+-  firebase
 
 # horizon-travels-Rakib-Coder00

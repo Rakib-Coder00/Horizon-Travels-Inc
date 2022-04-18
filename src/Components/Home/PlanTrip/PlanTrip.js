@@ -9,7 +9,7 @@ const PlanTrip = () => {
         <div className="container">
           <div className="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
             <div className="plan-content">
-              <span className="text-white">Discount Up To 40%</span>
+              <span>Discount Up To 40%</span>
               <h2 className="mt-2 mb-4 text-white">WHEN'S THE BEST TIME TO VISIT?!</h2>
               <button className="btn btn-primary">Start Planing</button>
             </div>

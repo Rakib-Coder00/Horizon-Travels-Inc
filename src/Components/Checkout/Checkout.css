@@ -1,0 +1,6 @@
+.checkout{
+    background: url(../../Asset/Image/Checkout.webp) center/cover no-repeat;
+}
+.checkout .row{
+    min-height: 60vh;
+}
