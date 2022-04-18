@@ -24,7 +24,6 @@ function App() {
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/services' element={<Services/>}></Route>
-        <Route path='/service/:serviceId' element={<ServiceDetails/>}></Route>
         <Route 
           path="/checkout"
           element={
