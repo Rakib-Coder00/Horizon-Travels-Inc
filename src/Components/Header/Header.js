@@ -30,7 +30,9 @@ const Header = () => {
       <Navbar collapseOnSelect  sticky='top' expand="lg" bg="light" variant="light">
         <Container>
           <Navbar.Brand as={Link} to="/">
-              <img src={logo} alt="img" />
+              {/* <img src={logo} alt="img" /> */}
+              <h2> Horizon Travels</h2>
+             
               </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
