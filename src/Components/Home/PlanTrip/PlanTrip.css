@@ -1,0 +1,18 @@
+.plan{
+    background: url(../../../Asset/Image/tripplan.webp) center/cover no-repeat;
+}
+.plan .row{
+    min-height: 60vh;
+}
+.plan-content span{
+    font-size: 28px;
+}
+.plan-content h2{
+    font-size: 60px;
+}
+.plan-content .btn{
+    border-color: transparent!important;
+}
+.text-plan {
+    color: #F07D31;
+}
